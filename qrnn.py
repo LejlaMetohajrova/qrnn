@@ -33,7 +33,7 @@ class ImdbDataset:
         return vectors
 
 
-    def load_by_label(path, label):
+    def load_by_label(self, path, label):
         for filename in os.listdir(path):
             # Text of a single review
             text = open(path+filename, 'r').read()
