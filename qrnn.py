@@ -139,8 +139,9 @@ if __name__ == "__main__":
         os.system('./download.sh')
 
     # Load embeddings model
-    print('Converting GloVe to Word2Vec...')
-    glove2word2vec('glove.42B.300d.txt', 'word2vec.txt')
+    if not os.path.exists('word2vec.txt'):
+        print('Converting GloVe to Word2Vec...')
+        glove2word2vec('glove.42B.300d.txt', 'word2vec.txt')
     print('Loading Word2Vec model...')
     word2vec_model = KeyedVectors.load_word2vec_format('word2vec.txt')
 
