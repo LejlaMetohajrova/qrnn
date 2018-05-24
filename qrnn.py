@@ -46,8 +46,8 @@ class ImdbDataset:
 
 
     def load_data(self):
-        self.load_by_label(dataset_path+'neg/', label=0)
-        self.load_by_label(dataset_path+'pos/', label=1)
+        self.load_by_label(self.dataset_path+'neg/', label=0)
+        self.load_by_label(self.dataset_path+'pos/', label=1)
 
 
 class QRNN:
